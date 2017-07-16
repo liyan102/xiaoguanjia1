@@ -1,0 +1,284 @@
+@import url(reset.css);
+
+.full(@w, @h, @bg) {
+    width: @w;
+    height: @h;
+    background: @bg;
+}
+//封装弹性盒
+.box(@dir:horizontal) {
+    display: -webkit-box; //吧父元素设置为檀香和布局；
+    -webkit-box-orient: @dir; //为父元素设置子元素的排列方式；
+}
+.pos(r){
+    position: relative;
+}//相对定位
+.pos(ab){
+    position: absolute;
+}//绝对定位
+html,
+body,
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+//变量
+@blue:#4194f0;//主体颜色
+//以下是css样式
+.container {
+    .box(vertical);
+
+    .head{
+        .full(100%,0.88rem,#4194f0);
+        .box;
+        -webkit-box-align: center;
+        .jiantou{
+            .tu{
+                .full(0.38rem,auto,none);
+                margin-left: 0.3rem;
+            }//tu
+        }//jiantou
+        .city{
+            font-size: 0.32rem;
+            color: white;
+            display: block;
+            -webkit-box-flex: 1;
+            margin-left: 1.3rem;
+            &.noresult{
+                margin-left: 1.84rem; 
+            }
+           }//city
+    }//header
+  .middle{
+           overflow: auto;
+           background: #f3f2f5;
+           -webkit-box-flex: 1;
+          
+     .search{
+            .full(580px/640px*100%,0.6rem,none);
+            background: #ffffff url(../img/1_08.jpg) no-repeat 0.1rem center;
+            padding-left: 0.46rem;
+            margin: 0.12rem 0.3rem;
+            border:1px solid #ffffff;
+            background-size:0.25rem ;
+            border-radius: 0.1rem;
+            box-sizing: border-box;
+            outline: none;
+            font-size: 0.22rem;
+            color:#aaaaaa;
+        }//search
+      
+        .mian{
+            .full(100%,auto,#ffffff);
+            .pos(r);
+            &.school{
+                height:9.47rem;
+            }
+            .location{
+                 line-height: 0.5rem;
+               display: inline-block;
+             font-size:0.22rem;
+                margin-left: 0.3rem; 
+                background: url(../img/city_03.png) no-repeat left center;  
+                background-size:0.2rem;
+                padding-left:0.3rem;  
+               color: #aaaaaa;
+            }//locationrem
+             .location_down{
+                 display: block;
+                 height: 0.5rem;
+                .gain{
+                     font-size: 0.25rem;
+                     color:#4194f0;
+                     margin-left: 0.6rem;
+                  }
+             }//location_down
+             .english{
+                 height: 0.45rem;
+                 width: 583px/640px*100%;
+                 background:#f3f2f5;
+                padding-left: 0.28rem;
+                 font-size: 0.24rem;
+                 font-weight: bold;
+                 line-height: 0.45rem;
+                 box-sizing: border-box;
+             }//english
+             .item{
+               .icon1{
+                 height:0.98rem;
+                 width: 534px/640px*100%;
+                 margin-left: 0.3rem;
+                 line-height: 0.98rem;
+                 border-bottom: 1px solid #e6e9eb;
+                 &.first{
+                     background: url(../img/dui_03.jpg) no-repeat right center;
+                     background-size:0.3rem ;
+                 }
+                 .city1{
+                     font-size: 0.24rem;
+                     &.one{
+                         color:#4194f0;
+                     }
+                 }//city1
+              }//icon1
+            }//item
+            .big{
+                display: block;
+                .full(0.8rem,0.8rem,#4194f0);
+                .pos(ab);
+                top:3.12rem;
+                left: 280px/640px*100%;
+                font-size: 0.34rem;
+                line-height: 0.8rem;
+                text-align: center;
+                color: #ffffff;
+                border-radius: 0.08rem;
+            }//big
+            .outside{
+                width: 0.15rem;
+                height: 6.04rem;
+                position: fixed;
+                top:3.32rem;
+                right:0.2rem;
+                .lin{
+                    line-break: 0.28rem;
+                    color:#4194f0;
+                }
+            }
+        }//mian
+        .pay_nav{
+            .full(100%,0.98rem,#ffffff);
+            border-bottom: 1px solid #dcdcdc;
+            line-height: 0.98rem;
+            .box;
+            .ding{
+               background: url(../img/pay_03.jpg) no-repeat left center; 
+               background-size:0.35rem ;
+               padding-left: 0.56rem;
+                -webkit-box-flex: 1;
+              font-size: 0.22rem;
+              font-weight: normal; 
+              margin-left: 0.28rem;
+            }
+            .seven{
+                margin-right: 0.28rem;
+                 color:#4194f0;
+            }
+        }//pay_nav
+        .pay_money{
+            .full(100%,0.78rem,none);
+             border-bottom: 1px solid #dcdcdc;
+            line-height: 0.78rem;
+            .xuan{
+                font-size: 0.22rem;
+                margin-left: 0.28rem;
+                color:#616264;
+             }
+        }//pay_money
+        .wallet{
+              .full(100%,0.9rem,#ffffff);
+             border-bottom: 1px solid #dcdcdc;
+             line-height: 0.9rem;
+             .box;
+          input[type="radio"]{
+                display: none;
+                &+label{
+                    width: 0.38rem;
+                    height: 0.38rem;
+                    display: block;
+                    margin-top: 0.26rem;
+                    margin-left: 0.3rem;
+                    margin-right: 0.26rem;
+                    background: url(../img/check-mark.png) no-repeat 0 bottom;
+                    background-size: 0.38rem ;
+                }
+                &:checked+label{
+                    background-position:0  0;
+                }
+            }
+            
+            .qian{
+                -webkit-box-flex: 1;
+//              margin-left: 0.94rem;
+                font-size: 0.24rem;
+                background: url(../img/pay_07.jpg) no-repeat left center;
+                background-size:0.38rem ;
+                padding-left: 0.64rem;
+                &.wei{
+                     background: url(../img/pay_10.jpg) no-repeat left center; 
+                      background-size:0.38rem ;
+                padding-left: 0.64rem;
+                }
+                &.zhi{
+                      background: url(../img/pay_12.png) no-repeat left center;
+                       background-size:0.38rem ;
+                padding-left: 0.64rem;
+                }
+                    
+          
+            }
+            .yu{
+                margin-right: 0.3rem;
+                font-size: 0.22rem;
+                color:#ff0051;
+            }
+        }
+    /*这是搜索学校的样式*/
+         &.noresult{
+               background: #ffffff;
+           }
+           .noresult_search{
+               .full(100%,0.86rem,#f3f2f5);
+               -webkit-box-align: center;
+               .box;
+           .search_sou{
+               display: block;
+               -webkit-box-flex: 1;
+            .full(auto,0.6rem,red);
+            background: #ffffff url(../img/1_08.jpg) no-repeat 0.1rem center;
+            padding-left: 0.46rem;
+            margin-left: 0.3rem;
+            margin-right: 0.16rem;
+            border:1px solid #ffffff;
+            background-size:0.25rem ;
+            border-radius: 0.05rem;
+            box-sizing: border-box;
+            outline: none;
+            font-size: 0.22rem;
+            color:#aaaaaa;
+        }//search_sou
+        .search_btn{
+            display: block;
+             .full(auto,0.6rem,#eaeaea);
+             margin-right: 0.3rem;
+              font-size: 0.24rem;
+              border: 1px solid #d9d9d9;
+               border-radius: 0.05rem;
+               padding: 0 0.18rem;
+               cursor:pointer;
+        }
+           }//noresult_search
+       /*这里是搜索无结果的样式*/
+      .nosearch{
+          .full(100%,2.2rem,none);
+          margin-top: 2.18rem;
+        
+          .noresult_tu{
+               margin: 0 2.5rem;
+              .full(1.38rem,auto,none);
+              
+          }
+          .sorry{
+              display: block;
+              margin-top: 0.3rem;
+              font-size: 0.28rem;
+              color:#cccccc;
+              text-align: center;
+          }
+      }//nosearch
+}//middle
+    .foot{
+        .full(100%,0.85rem,white);
+    }//foot
+}//container

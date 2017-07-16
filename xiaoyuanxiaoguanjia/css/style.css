@@ -1,0 +1,284 @@
+@import url(reset.css);
+html,
+body,
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.container {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.container .head {
+  width: 100%;
+  height: 0.88rem;
+  background: #4194f0;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: center;
+}
+.container .head .jiantou .tu {
+  width: 0.38rem;
+  height: auto;
+  background: none;
+  margin-left: 0.3rem;
+}
+.container .head .city {
+  font-size: 0.32rem;
+  color: white;
+  display: block;
+  -webkit-box-flex: 1;
+  margin-left: 1.3rem;
+}
+.container .head .city.noresult {
+  margin-left: 1.84rem;
+}
+.container .middle {
+  overflow: auto;
+  background: #f3f2f5;
+  -webkit-box-flex: 1;
+  /*这是搜索学校的样式*/
+  /*这里是搜索无结果的样式*/
+}
+.container .middle .search {
+  width: 90.625%;
+  height: 0.6rem;
+  background: none;
+  background: #ffffff url(../img/1_08.jpg) no-repeat 0.1rem center;
+  padding-left: 0.46rem;
+  margin: 0.12rem 0.3rem;
+  border: 1px solid #ffffff;
+  background-size: 0.25rem ;
+  border-radius: 0.1rem;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 0.22rem;
+  color: #aaaaaa;
+}
+.container .middle .mian {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  position: relative;
+}
+.container .middle .mian.school {
+  height: 9.47rem;
+}
+.container .middle .mian .location {
+  line-height: 0.5rem;
+  display: inline-block;
+  font-size: 0.22rem;
+  margin-left: 0.3rem;
+  background: url(../img/city_03.png) no-repeat left center;
+  background-size: 0.2rem;
+  padding-left: 0.3rem;
+  color: #aaaaaa;
+}
+.container .middle .mian .location_down {
+  display: block;
+  height: 0.5rem;
+}
+.container .middle .mian .location_down .gain {
+  font-size: 0.25rem;
+  color: #4194f0;
+  margin-left: 0.6rem;
+}
+.container .middle .mian .english {
+  height: 0.45rem;
+  width: 91.09375%;
+  background: #f3f2f5;
+  padding-left: 0.28rem;
+  font-size: 0.24rem;
+  font-weight: bold;
+  line-height: 0.45rem;
+  box-sizing: border-box;
+}
+.container .middle .mian .item .icon1 {
+  height: 0.98rem;
+  width: 83.4375%;
+  margin-left: 0.3rem;
+  line-height: 0.98rem;
+  border-bottom: 1px solid #e6e9eb;
+}
+.container .middle .mian .item .icon1.first {
+  background: url(../img/dui_03.jpg) no-repeat right center;
+  background-size: 0.3rem ;
+}
+.container .middle .mian .item .icon1 .city1 {
+  font-size: 0.24rem;
+}
+.container .middle .mian .item .icon1 .city1.one {
+  color: #4194f0;
+}
+.container .middle .mian .big {
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: #4194f0;
+  position: absolute;
+  top: 3.12rem;
+  left: 43.75%;
+  font-size: 0.34rem;
+  line-height: 0.8rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 0.08rem;
+}
+.container .middle .mian .outside {
+  width: 0.15rem;
+  height: 6.04rem;
+  position: fixed;
+  top: 3.32rem;
+  right: 0.2rem;
+}
+.container .middle .mian .outside .lin {
+  line-break: 0.28rem;
+  color: #4194f0;
+}
+.container .middle .pay_nav {
+  width: 100%;
+  height: 0.98rem;
+  background: #ffffff;
+  border-bottom: 1px solid #dcdcdc;
+  line-height: 0.98rem;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+.container .middle .pay_nav .ding {
+  background: url(../img/pay_03.jpg) no-repeat left center;
+  background-size: 0.35rem ;
+  padding-left: 0.56rem;
+  -webkit-box-flex: 1;
+  font-size: 0.22rem;
+  font-weight: normal;
+  margin-left: 0.28rem;
+}
+.container .middle .pay_nav .seven {
+  margin-right: 0.28rem;
+  color: #4194f0;
+}
+.container .middle .pay_money {
+  width: 100%;
+  height: 0.78rem;
+  background: none;
+  border-bottom: 1px solid #dcdcdc;
+  line-height: 0.78rem;
+}
+.container .middle .pay_money .xuan {
+  font-size: 0.22rem;
+  margin-left: 0.28rem;
+  color: #616264;
+}
+.container .middle .wallet {
+  width: 100%;
+  height: 0.9rem;
+  background: #ffffff;
+  border-bottom: 1px solid #dcdcdc;
+  line-height: 0.9rem;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+.container .middle .wallet input[type="radio"] {
+  display: none;
+}
+.container .middle .wallet input[type="radio"] + label {
+  width: 0.38rem;
+  height: 0.38rem;
+  display: block;
+  margin-top: 0.26rem;
+  margin-left: 0.3rem;
+  margin-right: 0.26rem;
+  background: url(../img/check-mark.png) no-repeat 0 bottom;
+  background-size: 0.38rem ;
+}
+.container .middle .wallet input[type="radio"]:checked + label {
+  background-position: 0  0;
+}
+.container .middle .wallet .qian {
+  -webkit-box-flex: 1;
+  font-size: 0.24rem;
+  background: url(../img/pay_07.jpg) no-repeat left center;
+  background-size: 0.38rem ;
+  padding-left: 0.64rem;
+}
+.container .middle .wallet .qian.wei {
+  background: url(../img/pay_10.jpg) no-repeat left center;
+  background-size: 0.38rem ;
+  padding-left: 0.64rem;
+}
+.container .middle .wallet .qian.zhi {
+  background: url(../img/pay_12.png) no-repeat left center;
+  background-size: 0.38rem ;
+  padding-left: 0.64rem;
+}
+.container .middle .wallet .yu {
+  margin-right: 0.3rem;
+  font-size: 0.22rem;
+  color: #ff0051;
+}
+.container .middle.noresult {
+  background: #ffffff;
+}
+.container .middle .noresult_search {
+  width: 100%;
+  height: 0.86rem;
+  background: #f3f2f5;
+  -webkit-box-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+.container .middle .noresult_search .search_sou {
+  display: block;
+  -webkit-box-flex: 1;
+  width: auto;
+  height: 0.6rem;
+  background: #ff0000;
+  background: #ffffff url(../img/1_08.jpg) no-repeat 0.1rem center;
+  padding-left: 0.46rem;
+  margin-left: 0.3rem;
+  margin-right: 0.16rem;
+  border: 1px solid #ffffff;
+  background-size: 0.25rem ;
+  border-radius: 0.05rem;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 0.22rem;
+  color: #aaaaaa;
+}
+.container .middle .noresult_search .search_btn {
+  display: block;
+  width: auto;
+  height: 0.6rem;
+  background: #eaeaea;
+  margin-right: 0.3rem;
+  font-size: 0.24rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 0.05rem;
+  padding: 0 0.18rem;
+  cursor: pointer;
+}
+.container .middle .nosearch {
+  width: 100%;
+  height: 2.2rem;
+  background: none;
+  margin-top: 2.18rem;
+}
+.container .middle .nosearch .noresult_tu {
+  margin: 0 2.5rem;
+  width: 1.38rem;
+  height: auto;
+  background: none;
+}
+.container .middle .nosearch .sorry {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.28rem;
+  color: #cccccc;
+  text-align: center;
+}
+.container .foot {
+  width: 100%;
+  height: 0.85rem;
+  background: #ffffff;
+}

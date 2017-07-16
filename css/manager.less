@@ -1,0 +1,144 @@
+@import url(reset.css);
+
+.full(@w, @h, @bg) {
+    width: @w;
+    height: @h;
+    background: @bg;
+}
+//封装弹性盒
+.box(@dir:horizontal) {
+    display: -webkit-box; //吧父元素设置为檀香和布局；
+    -webkit-box-orient: @dir; //为父元素设置子元素的排列方式；
+}
+.pos(r){
+    position: relative;
+}//相对定位
+.pos(ab){
+    position: absolute;
+}//绝对定位
+html,
+body,
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+//变量
+@blue:#4194f0;//主体颜色
+//以下是css样式
+.container {
+    .box(vertical);
+
+    .head{
+        .full(100%,0.88rem,#4194f0);
+        .box;
+        -webkit-box-align: center;
+        .jiantou{
+            .tu{
+                .full(0.38rem,auto,none);
+                margin-left: 0.3rem;
+            }//tu
+        }//jiantou
+     .school{
+         .full(100%,0.5rem,#3586e1);
+         -webkit-box-flex: 1;
+         display: block;
+         margin-left: 0.98rem;
+         margin-right: 0.55rem;
+         line-height: 0.5rem;
+          border-radius: 0.24rem;
+         .name{
+             display: block;
+             width: 2.2rem;
+             font-size: 0.32rem;
+             color: #ffffff;
+             white-space: nowrap;
+             overflow: hidden;
+             text-overflow: ellipsis;
+             background: url(../img/dian_06.jpg) no-repeat left center;
+             background-size:0.28rem ;
+             padding-left: 0.4rem;
+             margin-left: 0.25rem;
+        }
+     }//school
+     .right{
+         .full(0.88rem,0.66rem,none);
+         margin-right: 0.26rem;
+         text-align: center;
+          .shop_tu{
+              .full(0.35rem,auto,none);
+              margin-bottom: 0px;
+          }
+         .myshop{ 
+             font-size: 0.2rem;
+             color: #ffffff;
+         }
+     }//right
+    }//head
+    .middle{
+        -webkit-box-flex: 1;
+        overflow:auto;
+        .big{
+            .full(100%,auto,none);
+        }
+        .small{
+            .full(2.34rem,auto,none);
+            margin: 0  1.96rem;
+            margin-top: 0.7rem;
+       }
+        .no{
+            display: block;
+            margin-top: 0.26rem;
+            font-size: 0.28rem;
+            color:#acacac;
+            line-height: 0.34rem;
+            text-align: center;
+        }
+        .quick{
+                 display: block;
+            font-size: 0.28rem;
+            color:#acacac;
+             text-align: center;
+        }
+        .shen{
+            display: block;
+            .full(auto,0.76rem,none);
+           margin-left: 1.47rem;
+           margin-right: 1.47rem;
+           margin-top: 0.5rem;
+            border:1px solid #3f94ef;
+            font-size: 0.3rem;
+            color: #3f94ef;
+            line-height: 0.76rem;
+            text-align: center;
+            border-radius: 0.38rem;
+        }
+    }//middle
+    .foot{
+        .full(100%,0.98rem,none);
+        border-top: 1px solid #e5e9ec;
+        .box;
+        .item{
+        -webkit-box-flex: 1;
+        -webkit-box-align: center;
+        text-align: center;
+        .icon_dt{
+            margin-top: 0.16rem;
+            .foot_tu{
+                .full(0.4rem,auto,none);
+            }
+            
+        }
+        .icon_dd{
+            margin-top: 0.04rem;
+            .zi{
+                font-size: 0.2rem;
+                color:#acacac;
+                &.first{
+                    color: #3f94ef;
+                }
+            }
+        }
+        }
+    }//foot
+}

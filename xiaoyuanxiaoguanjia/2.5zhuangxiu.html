@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 <meta charset="utf-8">
+     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		     <link rel="stylesheet" href="css/myshop.css" />
+     			<script src="js/rem.js"></script>   
+	</head>
+	<body>
+		    <div class="container ">
+					<header class="head ">
+				<div class="up">
+					<a class="jiantou" href="2.6jiesuan.html"><img src="img/1_05.jpg" class="tu"></a><span class="shop">杭州西子湖四季三星级商务全国连锁</span>
+				 </div>
+				<div class="down">
+				   	  <div class="pic">
+					   <img src="img/touxiang.png" class="touxiang" alt="" />
+					   </div>
+				   <div class="center">
+					   	<p><img src="img/tong.png" class="tong"/><img src="img/cat.png" class="cat"/><img src="img/huangjin.png" class="huangjin"/></p>
+					   	<span class="zi">商品 <b class="num">22</b>种&nbsp;&nbsp;|</span>&nbsp;&nbsp;<span class="zi">起送 ￥<b class="num">0</b></span>
+				   </div>
+				   		<a href="" class="xing">
+				   		<img src="img/select_white.png" class="select_red"/>
+				   		</a>
+				 </div>
+					</header>
+					<section class="middle zhuangxiu">
+					<div class="nav">
+						<a href="javascript:;" class="icon active">商品</a>
+						<a href="javascript:;" class="icon">详情</a>
+						<a href="javascript:;" class="icon">评价</a>
+					</div>
+			     <img src="img/zhuangxiu.png" class="zhuang"/>
+			   <p class="next">店铺正在装修，敬请期待~</p>
+			</section>
+			  <footer class="foot zhuangxiu">
+			  
+			</footer>		
+</div>
+    <script type="text/javascript" src="js/jquery.js">
+    	
+    </script>
+		<script >
+			$('.item').click(function(){
+				$(this).addClass('active').siblings().removeClass('active');
+//				console.log(this);
+				
+			});
+			$('.icon').click(function(){
+				$(this).addClass('active').siblings().removeClass('active');
+			});
+			$('.food').click(function(){
+				$(this).addClass('active').siblings().removeClass('active');
+			});
+			
+				$('.jia').click(function(){
+				$(this).addClass('active').siblings().removeClass('active');
+			});
+		</script>
+			
+	</body>
+</html>
